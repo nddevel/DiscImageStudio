@@ -1,0 +1,64 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <!-- GTK 4 / libadwaita desktop frontend for Linux (GNOME).
+       The view models, services and localization catalogs are compiled from the WPF app
+       unchanged; Compat/ supplies the handful of WPF types they use, and the views in this
+       project bind to them with GTK widgets. -->
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net10.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    <!-- The engine formats numbers with the invariant culture; UI text needs named cultures. -->
+    <InvariantGlobalization>false</InvariantGlobalization>
+    <AssemblyName>disc-image-studio-gnome</AssemblyName>
+    <RootNamespace>DiscImageStudio</RootNamespace>
+    <Title>Disc Image Studio</Title>
+    <Product>Disc Image Studio</Product>
+    <Description>GTK 4 / libadwaita frontend for generating and burning visible images onto optical discs.</Description>
+    <Copyright>Copyright © 2026</Copyright>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="CommunityToolkit.Mvvm" Version="8.4.0" />
+    <PackageReference Include="GirCore.Adw-1" Version="0.8.1" />
+    <PackageReference Include="GirCore.Gtk-4.0" Version="0.8.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="../DiscImageStudio.Core/DiscImageStudio.Core.csproj" />
+    <ProjectReference Include="../DiscImageStudio.ImageIO/DiscImageStudio.ImageIO.csproj" />
+    <ProjectReference Include="../DiscImageStudio.Iso/DiscImageStudio.Iso.csproj" />
+    <ProjectReference Include="../DiscImageStudio.Cd/DiscImageStudio.Cd.csproj" />
+    <ProjectReference Include="../DiscImageStudio.Dvd/DiscImageStudio.Dvd.csproj" />
+    <ProjectReference Include="../DiscImageStudio.BluRay/DiscImageStudio.BluRay.csproj" />
+  </ItemGroup>
+
+  <!-- Shared presentation logic, compiled from the WPF app's sources. -->
+  <PropertyGroup>
+    <WpfAppDir>../DiscImageStudio.App/</WpfAppDir>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="$(WpfAppDir)ViewModels/*.cs" LinkBase="Shared/ViewModels" />
+    <Compile Include="$(WpfAppDir)Services/*.cs" LinkBase="Shared/Services"
+             Exclude="$(WpfAppDir)Services/DesignComposer.cs;
+                      $(WpfAppDir)Services/FileDialogService.cs;
+                      $(WpfAppDir)Services/StaWorker.cs;
+                      $(WpfAppDir)Services/ThemeResolver.cs;
+                      $(WpfAppDir)Services/WindowWorkArea.cs" />
+    <Compile Include="$(WpfAppDir)Localization/L.cs" Link="Shared/Localization/L.cs" />
+    <Compile Include="../Shared/*.cs" LinkBase="Shared" />
+    <Compile Include="../DiscImageStudio.Imaging/*.cs" LinkBase="Shared/Imaging" />
+    <Compile Include="../DiscImageStudio.Burning/OpticalBurnContracts.cs;
+                      ../DiscImageStudio.Burning/OpticalBurnBufferOptions.cs;
+                      ../DiscImageStudio.Burning/OpticalBurnDiagnostics.cs;
+                      ../DiscImageStudio.Burning/OpticalBurnOperationGate.cs" LinkBase="Shared/Burning" />
+    <EmbeddedResource Include="$(WpfAppDir)Localization/Catalogs/*.json"
+                      LogicalName="DiscImageStudio.Localization.Catalogs.%(Filename).json" />
+    <EmbeddedResource Include="Localization/Gnome.json" LogicalName="DiscImageStudio.Localization.Catalogs.Gnome.json" />
+    <EmbeddedResource Include="Resources/style.css" LogicalName="DiscImageStudio.Gnome.style.css" />
+    <EmbeddedResource Include="../../LICENSE" LogicalName="DiscImageStudio.Licenses.GPL" />
+    <EmbeddedResource Include="../../THIRD-PARTY-NOTICES.txt" LogicalName="DiscImageStudio.Licenses.ThirdParty" />
+    <EmbeddedResource Include="$(WpfAppDir)Assets/Fonts/HarmonyOS-Sans-LICENSE.txt" LogicalName="DiscImageStudio.Licenses.HarmonyOS" />
+  </ItemGroup>
+</Project>

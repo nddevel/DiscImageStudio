@@ -1,0 +1,227 @@
+{
+  "Gnome.Home": {
+    "zh-CN": "主页",
+    "en": "Home",
+    "zh-TW": "首頁",
+    "ja": "ホーム",
+    "tr": "Ana sayfa",
+    "es": "Inicio",
+    "cs": "Domů"
+  },
+  "Gnome.SaveAs": {
+    "zh-CN": "另存为…",
+    "en": "Save As…",
+    "zh-TW": "另存新檔…",
+    "ja": "名前を付けて保存…",
+    "tr": "Farklı Kaydet…",
+    "es": "Guardar como…",
+    "cs": "Uložit jako…"
+  },
+  "Gnome.KeyboardShortcuts": {
+    "zh-CN": "键盘快捷键",
+    "en": "Keyboard Shortcuts",
+    "zh-TW": "鍵盤快速鍵",
+    "ja": "キーボードショートカット",
+    "tr": "Klavye Kısayolları",
+    "es": "Atajos de teclado",
+    "cs": "Klávesové zkratky"
+  },
+  "Gnome.AboutApp": {
+    "zh-CN": "关于 Disc Image Studio",
+    "en": "About Disc Image Studio",
+    "zh-TW": "關於 Disc Image Studio",
+    "ja": "Disc Image Studio について",
+    "tr": "Disc Image Studio Hakkında",
+    "es": "Acerca de Disc Image Studio",
+    "cs": "O aplikaci Disc Image Studio"
+  },
+  "Gnome.MainMenu": {
+    "zh-CN": "主菜单",
+    "en": "Main Menu",
+    "zh-TW": "主選單",
+    "ja": "メインメニュー",
+    "tr": "Ana Menü",
+    "es": "Menú principal",
+    "cs": "Hlavní nabídka"
+  },
+  "Gnome.Close": {
+    "zh-CN": "关闭",
+    "en": "Close",
+    "zh-TW": "關閉",
+    "ja": "閉じる",
+    "tr": "Kapat",
+    "es": "Cerrar",
+    "cs": "Zavřít"
+  },
+  "Gnome.CloseWindow": {
+    "zh-CN": "关闭窗口",
+    "en": "Close Window",
+    "zh-TW": "關閉視窗",
+    "ja": "ウィンドウを閉じる",
+    "tr": "Pencereyi Kapat",
+    "es": "Cerrar la ventana",
+    "cs": "Zavřít okno"
+  },
+  "Gnome.UpstreamProject": {
+    "zh-CN": "上游项目",
+    "en": "Upstream Project",
+    "zh-TW": "上游專案",
+    "ja": "上流プロジェクト",
+    "tr": "Ana Proje",
+    "es": "Proyecto original",
+    "cs": "Původní projekt"
+  },
+  "Gnome.GtkPort": {
+    "zh-CN": "GTK 4 版本",
+    "en": "GTK 4 Port",
+    "zh-TW": "GTK 4 版本",
+    "ja": "GTK 4 版",
+    "tr": "GTK 4 Sürümü",
+    "es": "Versión GTK 4",
+    "cs": "Verze pro GTK 4"
+  },
+  "Gnome.Acknowledgements": {
+    "zh-CN": "致谢",
+    "en": "Acknowledgements",
+    "zh-TW": "致謝",
+    "ja": "謝辞",
+    "tr": "Teşekkürler",
+    "es": "Agradecimientos",
+    "cs": "Poděkování"
+  },
+  "Gnome.ShortcutsProject": {
+    "zh-CN": "工程",
+    "en": "Project",
+    "zh-TW": "專案",
+    "ja": "プロジェクト",
+    "tr": "Proje",
+    "es": "Proyecto",
+    "cs": "Projekt"
+  },
+  "Gnome.ShortcutsGeneral": {
+    "zh-CN": "常规",
+    "en": "General",
+    "zh-TW": "一般",
+    "ja": "全般",
+    "tr": "Genel",
+    "es": "General",
+    "cs": "Obecné"
+  },
+  "Gnome.ToolMissing": {
+    "zh-CN": "未安装",
+    "en": "not installed",
+    "zh-TW": "未安裝",
+    "ja": "未インストール",
+    "tr": "kurulu değil",
+    "es": "no instalado",
+    "cs": "není nainstalováno"
+  },
+  "Gnome.BurnBackendSummary": {
+    "zh-CN": "Linux 上的刻录由 libburnia 工具完成：CD 使用 {0}，DVD/蓝光使用 {1}。当前用户需要有 /dev/sr* 的读写权限（通常是 cdrom 或 optical 用户组）。",
+    "en": "On Linux, recording goes through the libburnia tools: {0} for CD, {1} for DVD and Blu-ray. Your user needs read/write access to /dev/sr* (usually the cdrom or optical group).",
+    "zh-TW": "Linux 上的燒錄由 libburnia 工具完成：CD 使用 {0}，DVD/藍光使用 {1}。目前使用者需要 /dev/sr* 的讀寫權限（通常是 cdrom 或 optical 群組）。",
+    "ja": "Linux では libburnia のツールで書き込みます。CD は {0}、DVD と Blu-ray は {1} を使用します。ユーザーには /dev/sr* への読み書き権限（通常は cdrom または optical グループ）が必要です。",
+    "tr": "Linux'ta yazma işlemi libburnia araçlarıyla yapılır: CD için {0}, DVD ve Blu-ray için {1}. Kullanıcınızın /dev/sr* aygıtlarına okuma/yazma erişimi olmalıdır (genellikle cdrom veya optical grubu).",
+    "es": "En Linux, la grabación usa las herramientas de libburnia: {0} para CD y {1} para DVD y Blu-ray. Tu usuario necesita acceso de lectura y escritura a /dev/sr* (normalmente el grupo cdrom u optical).",
+    "cs": "V Linuxu se vypaluje pomocí nástrojů libburnia: {0} pro CD a {1} pro DVD a Blu-ray. Váš uživatel potřebuje přístup pro čtení i zápis k /dev/sr* (obvykle skupina cdrom nebo optical)."
+  },
+  "Gnome.ToolRequired": {
+    "zh-CN": "需要安装 {0} 才能读取或刻录光盘。",
+    "en": "{0} must be installed to read or record discs.",
+    "zh-TW": "需要安裝 {0} 才能讀取或燒錄光碟。",
+    "ja": "ディスクの読み取りや書き込みには {0} のインストールが必要です。",
+    "tr": "Diskleri okumak veya yazmak için {0} kurulu olmalıdır.",
+    "es": "Hay que instalar {0} para leer o grabar discos.",
+    "cs": "Ke čtení a vypalování disků je potřeba nainstalovat {0}."
+  },
+  "Gnome.MediaNotBlank": {
+    "zh-CN": "光盘不是空白盘（{0}）。实时刻录只能使用空白光盘。",
+    "en": "The disc is not blank ({0}). Live burning only writes to blank media.",
+    "zh-TW": "光碟不是空白片（{0}）。即時燒錄只能使用空白光碟。",
+    "ja": "ディスクがブランクではありません（{0}）。ライブ書き込みはブランクメディアにのみ行えます。",
+    "tr": "Disk boş değil ({0}). Canlı yazma yalnızca boş ortama yapılabilir.",
+    "es": "El disco no está vacío ({0}). La grabación en directo solo escribe en discos vírgenes.",
+    "cs": "Disk není prázdný ({0}). Živé vypalování zapisuje jen na prázdná média."
+  },
+  "Gnome.MediaUnreadable": {
+    "zh-CN": "无法读取光盘容量。请确认已放入空白光盘。\n{0}",
+    "en": "Could not read the disc capacity. Make sure a blank disc is inserted.\n{0}",
+    "zh-TW": "無法讀取光碟容量。請確認已放入空白光碟。\n{0}",
+    "ja": "ディスク容量を読み取れませんでした。ブランクディスクが入っているか確認してください。\n{0}",
+    "tr": "Disk kapasitesi okunamadı. Boş bir disk takılı olduğundan emin olun.\n{0}",
+    "es": "No se pudo leer la capacidad del disco. Comprueba que hay un disco virgen.\n{0}",
+    "cs": "Kapacitu disku se nepodařilo přečíst. Zkontrolujte, že je vložen prázdný disk.\n{0}"
+  },
+  "Gnome.BurnStarting": {
+    "zh-CN": "正在通过 {0} 打开刻录机…",
+    "en": "Opening the recorder with {0}…",
+    "zh-TW": "正在透過 {0} 開啟燒錄機…",
+    "ja": "{0} でドライブを開いています…",
+    "tr": "Yazıcı {0} ile açılıyor…",
+    "es": "Abriendo la grabadora con {0}…",
+    "cs": "Otevírání vypalovačky pomocí {0}…"
+  },
+  "Gnome.ToolFailed": {
+    "zh-CN": "{0} 报告错误：\n{1}",
+    "en": "{0} reported an error:\n{1}",
+    "zh-TW": "{0} 回報錯誤：\n{1}",
+    "ja": "{0} がエラーを報告しました：\n{1}",
+    "tr": "{0} bir hata bildirdi:\n{1}",
+    "es": "{0} informó de un error:\n{1}",
+    "cs": "{0} ohlásil chybu:\n{1}"
+  },
+  "Gnome.BurnShortContent": {
+    "zh-CN": "生成的数据长度不符：已写入 {0} 字节，应为 {1} 字节。",
+    "en": "The generated data has the wrong length: {0} bytes written, {1} expected.",
+    "zh-TW": "產生的資料長度不符：已寫入 {0} 位元組，應為 {1} 位元組。",
+    "ja": "生成されたデータの長さが一致しません：{0} バイト書き込み、想定 {1} バイト。",
+    "tr": "Üretilen verinin uzunluğu yanlış: {0} bayt yazıldı, {1} bekleniyordu.",
+    "es": "Los datos generados tienen una longitud incorrecta: {0} bytes escritos, se esperaban {1}.",
+    "cs": "Vygenerovaná data mají špatnou délku: zapsáno {0} bajtů, očekáváno {1}."
+  },
+  "Gnome.BurnFinalizing": {
+    "zh-CN": "数据已全部送出，刻录机正在关闭轨道和光盘…",
+    "en": "All data sent; the recorder is closing the track and disc…",
+    "zh-TW": "資料已全部送出，燒錄機正在關閉軌道與光碟…",
+    "ja": "データ送信完了。ドライブがトラックとディスクをクローズしています…",
+    "tr": "Tüm veriler gönderildi; yazıcı izi ve diski kapatıyor…",
+    "es": "Datos enviados; la grabadora está cerrando la pista y el disco…",
+    "cs": "Všechna data odeslána, vypalovačka uzavírá stopu a disk…"
+  },
+  "Gnome.BurnComplete": {
+    "zh-CN": "刻录完成",
+    "en": "Recording finished",
+    "zh-TW": "燒錄完成",
+    "ja": "書き込み完了",
+    "tr": "Yazma tamamlandı",
+    "es": "Grabación terminada",
+    "cs": "Vypalování dokončeno"
+  },
+  "Gnome.InvalidRecorder": {
+    "zh-CN": "无效的刻录机设备。",
+    "en": "Invalid recorder device.",
+    "zh-TW": "無效的燒錄機裝置。",
+    "ja": "無効なドライブです。",
+    "tr": "Geçersiz yazıcı aygıtı.",
+    "es": "Dispositivo de grabación no válido.",
+    "cs": "Neplatné vypalovací zařízení."
+  },
+  "Gnome.MoveLayerUp": {
+    "zh-CN": "上移图层",
+    "en": "Move Layer Up",
+    "zh-TW": "上移圖層",
+    "ja": "レイヤーを上へ",
+    "tr": "Katmanı Yukarı Taşı",
+    "es": "Subir capa",
+    "cs": "Posunout vrstvu nahoru"
+  },
+  "Gnome.MoveLayerDown": {
+    "zh-CN": "下移图层",
+    "en": "Move Layer Down",
+    "zh-TW": "下移圖層",
+    "ja": "レイヤーを下へ",
+    "tr": "Katmanı Aşağı Taşı",
+    "es": "Bajar capa",
+    "cs": "Posunout vrstvu dolů"
+  }
+}
