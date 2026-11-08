@@ -45,6 +45,8 @@ Disc Image Studio converts an image into data that meets the physical-layer cons
 
 On Windows, download and run `win-x64.exe`. On Linux or macOS, download the **experimental CLI** archive for your CPU, extract it and run `./disc-image-studio --help`. Each release package includes the .NET runtime. [GitHub Releases](https://github.com/JiaFeiMiao-K-Cat/DiscImageStudio/releases)
 
+**Linux desktop (GNOME):** this fork adds a GTK 4 / libadwaita version of the app with the same pages as the Windows GUI. Run it with `dotnet run --project src/DiscImageStudio.Gnome`, install it with `packaging/linux/install.sh`, or on NixOS with `nix-build packaging/nix`. See [GNOME.md](docs/GNOME.md).
+
 ### 1. Create a Project
 
 Choose CD, DVD, or Blu-ray on the home page, specify an output location, and create the project.
@@ -156,6 +158,7 @@ src/DiscImageStudio.Dvd/     DVD engine adapter module
 src/DiscImageStudio.BluRay/  BD-R geometry, 17PP/ECC, 3T/6T mapping, streaming generation, and ISO
 src/DiscImageStudio.Iso/     UDF 2.01 / ISO9660 writers
 src/DiscImageStudio.App/     WPF GUI, unified command line, and Store assets
+src/DiscImageStudio.Gnome/  GTK 4 / libadwaita GUI for Linux (shares the WPF view models)
 src/DvdImageSolver/          Isolated DVD encoding/solving engine
 tests/                       Architecture regression tests without a third-party test framework
 packaging/                   MSIX manifest and packaging scripts
@@ -168,6 +171,7 @@ docs/                        Architecture, engine, preset, release, and other do
 | Document | Contents |
 | --- | --- |
 | [ARCHITECTURE.md](docs/ARCHITECTURE.md) | Module abstractions, boundaries between layers, and extension rules |
+| [GNOME.md](docs/GNOME.md) | The GTK 4 / libadwaita Linux frontend: build, install, burning backend |
 | [LOCALIZATION.md](docs/LOCALIZATION.md) | Language settings and translation resource maintenance |
 | [DVD_ENGINE.md](docs/DVD_ENGINE.md) | DVD NRZI image constraint solver conventions, encoding chain, and self-test coverage |
 | [CD_AUDIO_COMPATIBILITY.md](docs/CD_AUDIO_COMPATIBILITY.md) | CD audio track formats, byte order, and ghosting troubleshooting |

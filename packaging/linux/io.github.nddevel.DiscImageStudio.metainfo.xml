@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component type="desktop-application">
+  <id>io.github.nddevel.DiscImageStudio</id>
+  <metadata_license>CC0-1.0</metadata_license>
+  <project_license>GPL-3.0-or-later</project_license>
+  <name>Disc Image Studio</name>
+  <summary>Create and burn visible artwork on optical discs</summary>
+  <description>
+    <p>
+      Disc Image Studio turns a picture into data that meets the physical-layer constraints
+      of CD, DVD and single-layer BD-R media. After burning, the picture is visible on the
+      data side of the disc.
+    </p>
+    <p>This is the GTK 4 / libadwaita edition of the application for GNOME and other Linux desktops.</p>
+    <ul>
+      <li>Layer-based disc designer with tone and dithering controls</li>
+      <li>Design projection and read-back preview of generated images</li>
+      <li>ISO, WAV + CUE and RAW export</li>
+      <li>Experimental live burning through cdrskin and xorriso</li>
+      <li>Assisted calibration from a photo of a burned test disc</li>
+    </ul>
+  </description>
+  <launchable type="desktop-id">io.github.nddevel.DiscImageStudio.desktop</launchable>
+  <url type="homepage">https://github.com/nddevel/DiscImageStudio</url>
+  <url type="bugtracker">https://github.com/nddevel/DiscImageStudio/issues</url>
+  <developer id="io.github.jiafeimiao-k-cat">
+    <name>JiaFeiMiao-K-Cat and contributors</name>
+  </developer>
+  <content_rating type="oars-1.1"/>
+  <requires>
+    <display_length compare="ge">720</display_length>
+  </requires>
+  <supports>
+    <control>pointing</control>
+    <control>keyboard</control>
+  </supports>
+</component>

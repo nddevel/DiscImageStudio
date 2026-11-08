@@ -22,7 +22,12 @@ internal static class DevHooks
                 window.Shell.NavigateTo(workspace);
             }
 
-            if (!string.IsNullOrEmpty(action)) window.Window.ActivateAction("win." + action, null);
+            // DIS_GTK_DEBUG_EXPORT=1 runs the export page's Generate command (end-to-end checks).
+            if (Environment.GetEnvironmentVariable("DIS_GTK_DEBUG_EXPORT") == "1" && window.Shell.Export.GenerateCommand.CanExecute(null))
+                _ = window.Shell.Export.GenerateCommand.ExecuteAsync(null);
+
+            // The window is a Gio.ActionGroup holding the "win." actions without their prefix.
+            if (!string.IsNullOrEmpty(action)) window.Window.ActivateAction(action, null);
             return false;
         });
     }

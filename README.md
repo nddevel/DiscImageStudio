@@ -43,6 +43,8 @@ Disc Image Studio 可将一张图片转换成符合 CD、DVD 与单层 BD-R 光�
 
 ## 快速开始
 
+> **Linux 桌面版（GNOME）**：本分支新增了 GTK 4 / libadwaita 界面，页面与 Windows 版一致。运行 `dotnet run --project src/DiscImageStudio.Gnome`，或用 `packaging/linux/install.sh` 安装（NixOS：`nix-build packaging/nix`）。详见 [GNOME.md](docs/GNOME.md)。
+
 Windows 下载 `win-x64.exe` 后可直接运行。Linux 或 macOS 请下载与 CPU 匹配的**实验性 CLI** 压缩包，解压后运行 `./disc-image-studio --help`。这些发布包均自带 .NET 运行时。 [GitHub Releases](https://github.com/JiaFeiMiao-K-Cat/DiscImageStudio/releases)
 
 ### 1. 新建工程

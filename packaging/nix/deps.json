@@ -1,0 +1,87 @@
+[
+  {
+    "pname": "CommunityToolkit.Mvvm",
+    "version": "8.4.0",
+    "hash": "sha256-a0D550q+ffreU9Z+kQPdzJYPNaj1UjgyPofLzUg02ZI="
+  },
+  {
+    "pname": "GirCore.Adw-1",
+    "version": "0.8.1",
+    "hash": "sha256-ThhcuorT5UYAMKeR4bmYuZDHZHM7FNT+wSUTjB5+OYw="
+  },
+  {
+    "pname": "GirCore.Cairo-1.0",
+    "version": "0.8.1",
+    "hash": "sha256-MinkwN0PKMJK1iXzD6kA//d+DGVmLKcfU3dzzKk5vKI="
+  },
+  {
+    "pname": "GirCore.FreeType2-2.0",
+    "version": "0.8.1",
+    "hash": "sha256-RRUBzW12TT7xL4ZQlxnMbSmbQGcb2rvSOTj2gdn722s="
+  },
+  {
+    "pname": "GirCore.Gdk-4.0",
+    "version": "0.8.1",
+    "hash": "sha256-0khnXKfxrj4IUM0znA+TfkprGAftLHJy6NDhMmofE1w="
+  },
+  {
+    "pname": "GirCore.GdkPixbuf-2.0",
+    "version": "0.8.1",
+    "hash": "sha256-21CbVVSHnwsL5uqRpn5sDHYyNaE82NebcyOtCdKqTiI="
+  },
+  {
+    "pname": "GirCore.Gio-2.0",
+    "version": "0.8.1",
+    "hash": "sha256-TPpbGuaezRS4Ev08LIpefrt0aw86k+bSIBpC9F4U57w="
+  },
+  {
+    "pname": "GirCore.GLib-2.0",
+    "version": "0.8.1",
+    "hash": "sha256-KoXSXAZLgjAiwnYbj/8qG8NNS9ZkmNnrnCkTkhbINtM="
+  },
+  {
+    "pname": "GirCore.GObject-2.0",
+    "version": "0.8.1",
+    "hash": "sha256-7cBJjoukKfofjkGqL0B/HCnNCKqu05slUQUFA7mbgiI="
+  },
+  {
+    "pname": "GirCore.Graphene-1.0",
+    "version": "0.8.1",
+    "hash": "sha256-Pd0NVB+RviqrdF1cMebWsTe+gpjMvGqX+2eYLkDIMnk="
+  },
+  {
+    "pname": "GirCore.Gsk-4.0",
+    "version": "0.8.1",
+    "hash": "sha256-mXbrTnyYi+L32HeYBG55NgskapCaRrY3OIEOQAVCZds="
+  },
+  {
+    "pname": "GirCore.Gtk-4.0",
+    "version": "0.8.1",
+    "hash": "sha256-1GU21zzad/+lsHrZwCzH4/iJ79WdwbLsOIgbRL9pwWo="
+  },
+  {
+    "pname": "GirCore.HarfBuzz-0.0",
+    "version": "0.8.1",
+    "hash": "sha256-mpijA2J+Pcy0vsFPfNmDfIe25ylEb0xykvcJDvhgg1A="
+  },
+  {
+    "pname": "GirCore.Pango-1.0",
+    "version": "0.8.1",
+    "hash": "sha256-1OZQwEcJGKzYnS+YWP1Bw4P9LPZQ1F6LVGRyIa8jLcE="
+  },
+  {
+    "pname": "GirCore.PangoCairo-1.0",
+    "version": "0.8.1",
+    "hash": "sha256-ErCXzJU6rOeNgb+7xlkaxKIfAqsnWHf8HHVHWsUUysI="
+  },
+  {
+    "pname": "StbImageSharp",
+    "version": "2.30.16",
+    "hash": "sha256-e8acj+iix2TQfeMgqiAJuxVgOSiuAEzeRWhsAQbKhJs="
+  },
+  {
+    "pname": "StbImageWriteSharp",
+    "version": "1.16.7",
+    "hash": "sha256-E9AQO6tcXneDo4rwcSaW/cNhqFDv881o74wqB2fTG0Y="
+  }
+]

@@ -364,6 +364,82 @@ internal sealed class Binder : IDisposable
         };
     }
 
+    /// <summary>Gtk.DropDown flavour of <see cref="Combo{T}"/>, for compact inline pickers.</summary>
+    public void DropDown<T>(Gtk.DropDown dropDown, INotifyPropertyChanged source, string itemsProperty, Func<IReadOnlyList<T>> items,
+        Func<T, string> display, string selectedProperty, Func<T?> getSelected, Action<T?> setSelected)
+        where T : class
+    {
+        IReadOnlyList<T> current = [];
+        bool pushing = false;
+
+        void SyncSelection()
+        {
+            T? selected = getSelected();
+            int index = -1;
+            for (int i = 0; i < current.Count; i++)
+            {
+                if (ReferenceEquals(current[i], selected) || Equals(current[i], selected))
+                {
+                    index = i;
+                    break;
+                }
+            }
+
+            uint wanted = index < 0 ? Gtk.Constants.INVALID_LIST_POSITION : (uint)index;
+            if (dropDown.GetSelected() == wanted) return;
+            pushing = true;
+            try
+            {
+                dropDown.SetSelected(wanted);
+            }
+            finally
+            {
+                pushing = false;
+            }
+        }
+
+        Watch(source, itemsProperty, () =>
+        {
+            IReadOnlyList<T> next = items().ToArray();
+            string[] labels = next.Select(display).ToArray();
+            bool same = next.Count == current.Count && next.Select(display).SequenceEqual(current.Select(display));
+            current = next;
+            if (!same)
+            {
+                pushing = true;
+                try
+                {
+                    dropDown.SetModel(Gtk.StringList.New(labels));
+                }
+                finally
+                {
+                    pushing = false;
+                }
+            }
+
+            SyncSelection();
+        });
+        if (selectedProperty != itemsProperty) Watch(source, selectedProperty, SyncSelection);
+        dropDown.OnNotify += (_, args) =>
+        {
+            if (args.Pspec.GetName() != "selected" || pushing) return;
+            uint index = dropDown.GetSelected();
+            T? item = index < current.Count ? current[(int)index] : null;
+            if (item is null || ReferenceEquals(item, getSelected())) return;
+            pushing = true;
+            try
+            {
+                setSelected(item);
+            }
+            finally
+            {
+                pushing = false;
+            }
+
+            SyncSelection();
+        };
+    }
+
     private static void OnMain(Action action)
     {
         Dispatcher dispatcher = Dispatcher.CurrentDispatcher;

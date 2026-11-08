@@ -63,7 +63,7 @@ internal sealed class MainWindow
         Window = Adw.ApplicationWindow.New(application);
         Window.SetTitle("Disc Image Studio");
         Window.SetIconName(App.ApplicationId);
-        Window.SetDefaultSize(1240, 780);
+        Window.SetDefaultSize(1300, 820);
         Window.SetSizeRequest(720, 560);
 
         _shell = new ShellViewModel(Dispatcher.CurrentDispatcher, new LinuxOpticalDiscBurner())

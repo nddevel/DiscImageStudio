@@ -1,0 +1,16 @@
+[Desktop Entry]
+Type=Application
+Name=Disc Image Studio
+Name[zh_CN]=Disc Image Studio
+GenericName=Disc Artwork Burner
+GenericName[zh_CN]=光盘盘面图像工作台
+Comment=Create and burn visible artwork on CDs, DVDs and Blu-ray discs
+Comment[zh_CN]=生成并刻录肉眼可见的光盘盘面图像
+Exec=disc-image-studio-gnome %F
+Icon=io.github.nddevel.DiscImageStudio
+Terminal=false
+Categories=AudioVideo;DiscBurning;Graphics;GTK;GNOME;
+Keywords=CD;DVD;Blu-ray;burn;disc;image;artwork;
+MimeType=application/x-discimagestudio-project;
+StartupNotify=true
+DBusActivatable=false

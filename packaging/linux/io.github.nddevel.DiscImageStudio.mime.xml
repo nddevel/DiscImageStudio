@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mime-info xmlns="http://www.freedesktop.org/standards/shared-mime-info">
+  <mime-type type="application/x-discimagestudio-project">
+    <sub-class-of type="application/json"/>
+    <comment>Disc Image Studio project</comment>
+    <comment xml:lang="zh_CN">Disc Image Studio 工程</comment>
+    <icon name="io.github.nddevel.DiscImageStudio"/>
+    <glob pattern="*.discproj"/>
+  </mime-type>
+</mime-info>

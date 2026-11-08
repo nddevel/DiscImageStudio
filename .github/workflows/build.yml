@@ -20,6 +20,35 @@ permissions:
   contents: read
 
 jobs:
+  gnome:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 30
+    env:
+      DOTNET_CLI_TELEMETRY_OPTOUT: '1'
+      DOTNET_NOLOGO: '1'
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ inputs.ref || github.sha }}
+          persist-credentials: false
+
+      - uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: 10.0.x
+
+      - name: Publish the GTK 4 frontend
+        run: |
+          dotnet publish src/DiscImageStudio.Gnome/DiscImageStudio.Gnome.csproj \
+            -c Release -r linux-x64 --self-contained true -o "$RUNNER_TEMP/gnome"
+
+      - name: Smoke-test the CLI entry point of the GTK build
+        run: |
+          "$RUNNER_TEMP/gnome/disc-image-studio-gnome" --help
+          "$RUNNER_TEMP/gnome/disc-image-studio-gnome" cd-generate \
+            --input src/DiscImageStudio.App/Assets/DiscImageStudio-256.png \
+            --output "$RUNNER_TEMP/cd-smoke.wav" --sectors 2
+          test -s "$RUNNER_TEMP/cd-smoke.wav"
+
   cli:
     strategy:
       fail-fast: false
