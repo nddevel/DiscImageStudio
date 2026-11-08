@@ -99,7 +99,9 @@ internal sealed class HomePage : IDisposable
             Gtk.Label detail = Ui.Line(tile.Detail, "caption", "dim-label");
             detail.SetXalign(0.5f);
             Gtk.Box body = Ui.VBox(8, icon, name, detail);
-            body.SetValign(Gtk.Align.Center);
+            body.SetValign(Gtk.Align.Start);
+            name.SetSizeRequest(-1, 40);
+            name.SetValign(Gtk.Align.Start);
             Gtk.Overlay overlay = Gtk.Overlay.New();
             overlay.SetChild(body);
             if (tile.HasContributor)

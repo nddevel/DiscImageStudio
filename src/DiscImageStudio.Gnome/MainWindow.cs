@@ -95,7 +95,7 @@ internal sealed class MainWindow
         Gtk.Button save = Ui.IconButton("document-save-symbolic", L.T("Xaml.Save"));
         _binder.Command(save, _shell.SaveProjectCommand);
         sidebarHeader.PackEnd(save);
-        sidebarHeader.SetTitleWidget(Adw.WindowTitle.New("Disc Image Studio", string.Empty));
+        sidebarHeader.SetShowTitle(false);
         sidebarView.AddTopBar(sidebarHeader);
 
         _projectNameLabel = Ui.Line(string.Empty, "heading");

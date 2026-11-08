@@ -8,6 +8,7 @@
   buildDotnetModule,
   dotnetCorePackages,
   wrapGAppsHook4,
+  adwaita-icon-theme,
   glib,
   gtk4,
   libadwaita,
@@ -39,7 +40,7 @@ buildDotnetModule {
   executables = [ "disc-image-studio-gnome" ];
 
   nativeBuildInputs = [ wrapGAppsHook4 ];
-  buildInputs = [ gtk4 libadwaita ];
+  buildInputs = [ gtk4 libadwaita adwaita-icon-theme ];
   # GirCore loads these with dlopen; buildDotnetModule adds them to LD_LIBRARY_PATH.
   runtimeDeps = [ glib gtk4 libadwaita cairo pango gdk-pixbuf graphene harfbuzz ];
 
