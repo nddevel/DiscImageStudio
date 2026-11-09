@@ -119,6 +119,17 @@ public sealed partial class LinuxOpticalDiscBurner : IOpticalDiscBurner
         ArgumentNullException.ThrowIfNull(request);
         request.Validate();
         ValidateDevice(request.DeviceId);
+        if (request.MediaKind == OpticalBurnMediaKind.CdAudio)
+        {
+            // The CD audio command runs with -force (see BuildCommand), which turns off cdrskin's own
+            // size test, so the track is checked against the loaded disc here instead.
+            OpticalMediaCapacity capacity = await GetMediaCapacityAsync(request.DeviceId, request.MediaKind, cancellationToken)
+                .ConfigureAwait(false);
+            long sectors = request.ContentLength / OpticalBurnMedia.GetSectorBytes(request.MediaKind);
+            if (sectors > capacity.WritableSectors)
+                throw new InvalidOperationException(L.Format("Gnome.TrackTooLong", sectors, capacity.WritableSectors));
+        }
+
         (string tool, IReadOnlyList<string> arguments) = BuildCommand(request);
         Stopwatch elapsed = Stopwatch.StartNew();
         progress?.Report(new OpticalBurnProgress("device", L.Format("Gnome.BurnStarting", Path.GetFileName(tool)), 0, request.ContentLength));
@@ -202,7 +213,10 @@ public sealed partial class LinuxOpticalDiscBurner : IOpticalDiscBurner
                 if (speed is not null) arguments.Add(speed);
                 // Audio arrives as headerless little-endian PCM; cdrecord-style tools expect
                 // big-endian unless told otherwise with -swab.
-                if (request.MediaKind == OpticalBurnMediaKind.CdAudio) arguments.AddRange(["-audio", "-swab"]);
+                // -force: cdrskin predicts the session size of a stdin audio track as bytes / 2048
+                // instead of bytes / 2352 and would reject a full-length track (413262s > 359847s on an
+                // 80-minute CD-R). BurnAsync checks the real sector count against the disc first.
+                if (request.MediaKind == OpticalBurnMediaKind.CdAudio) arguments.AddRange(["-force", "-audio", "-swab"]);
                 else arguments.Add("-data");
                 arguments.AddRange(["-nopad", size, "-"]);
                 return (tool, arguments);

@@ -389,6 +389,8 @@ internal sealed class MainWindow
             string text = string.IsNullOrWhiteSpace(item.Message)
                 ? item.Title
                 : item.Title + " — " + item.Message;
+            // Toasts are one line: line breaks would render as "↵" glyphs.
+            text = string.Join(' ', text.Split(['\r', '\n'], StringSplitOptions.RemoveEmptyEntries | StringSplitOptions.TrimEntries));
             Adw.Toast toast = Adw.Toast.New(GLib.Markup.EscapeText(text));
             toast.SetTimeout((uint)Math.Max(1, Math.Round(item.Timeout.TotalSeconds)));
             if (item.Kind is ToastKind.Error or ToastKind.Warning) toast.SetPriority(Adw.ToastPriority.High);

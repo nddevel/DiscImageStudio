@@ -223,5 +223,14 @@
     "tr": "Katmanı Aşağı Taşı",
     "es": "Bajar capa",
     "cs": "Posunout vrstvu dolů"
+  },
+  "Gnome.TrackTooLong": {
+    "zh-CN": "音轨有 {0} 个扇区，但光盘只有 {1} 个可写扇区。",
+    "en": "The track has {0} sectors but the disc only has {1} writable sectors.",
+    "zh-TW": "音軌有 {0} 個扇區，但光碟只有 {1} 個可寫扇區。",
+    "ja": "トラックは {0} セクターですが、ディスクの書き込み可能セクターは {1} です。",
+    "tr": "İz {0} sektör, ancak diskte yalnızca {1} yazılabilir sektör var.",
+    "es": "La pista tiene {0} sectores, pero el disco solo tiene {1} sectores grabables.",
+    "cs": "Stopa má {0} sektorů, ale disk má jen {1} zapisovatelných sektorů."
   }
 }
